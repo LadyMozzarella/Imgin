@@ -20,7 +20,7 @@ def select_image(search_results_URL)
 
 end
 
-def imagin(search_phrase)
-  # imagin method calls the other methods to return the end result.
+def imgin(search_phrase)
+  # imgin method calls the other methods to return the end result.
   select_image(get_search_results(search_phrase))
 end
