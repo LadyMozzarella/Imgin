@@ -1,4 +1,4 @@
-ImgIn
+IamgIn
 =====
 
-ImgIn Gem by Team Awesomos (Mason, Iván, José, Brittany)
+IamgIn Gem by Team Awesomos (Mason, Iván, José, Brittany)
