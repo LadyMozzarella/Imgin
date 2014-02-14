@@ -1,15 +1,14 @@
 require_relative '../lib/imgin'
 require 'rspec'
 
-describe 'get_search_results' do
-  it "should return a google images webpage" do
-    get_search_results('cats') == Nokogiri::HTML(open("https://www.google.com/search?site=imghp&tbm=isch&q=cats"))
-  end
-end
+describe Image do
+  let(:image) { Image.new }
+    it "should return a google images webpage" do
+      expect(image.get_search_results('cats').class).to eq(Nokogiri::HTML::Document)
+    end
 
-describe 'select_image' do
   it "should return an image file" do
     cats = Nokogiri::HTML(open("https://www.google.com/search?site=imghp&tbm=isch&q=cats"))
-    Imgin.select_image(cats) =~ /.+\.(png|jpg|gif|svg)/
+    expect(image.select_image(cats)).to  match(/.+\.(png|jpg|gif|svg)/)
   end
 end
