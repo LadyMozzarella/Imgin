@@ -5,6 +5,7 @@
 require 'open-uri'
 require 'nokogiri'
 
+<<<<<<< HEAD
 # takes the search_phrase and returns a URL that contains
 # search results which are images found (such as a Google Images search results page)
 class Imgin
@@ -65,3 +66,29 @@ p test.imgin('paulyshore')
 # page = test.get_search_results('Paulyshore')
 # links = test.extract_links_to_imgs(page)
 # p test.parse_image_links(links)
+=======
+# DRAFT - draft not final text/comments
+
+# the rest is coming! right now!
+# module Imgin
+  class Image
+
+    # takes the search_phrase and returns a URL that contains
+    # search results which are images found (such as a Google Images search results page)
+    def get_search_results(search_phrase)
+      Nokogiri::HTML(open("https://www.google.com/search?site=imghp&tbm=isch&q=cats"))
+    end
+
+    # takes the search_results_URL and returns the URL of just one image
+    def select_image(search_results_URL)
+      "ivan.jpg"
+    end
+
+    def imgin(search_phrase)
+      # imgin method calls the other methods to return the end result.
+      select_image(get_search_results(search_phrase))
+    end
+  end
+# end
+
+>>>>>>> master
