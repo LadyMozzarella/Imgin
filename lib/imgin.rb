@@ -30,10 +30,20 @@ class Imgin
     img_urls = []
     img_url_pattern = /.*(imgurl=)(.*\.(jpg|jpeg|png|gif|svg))/
     links.each do |link|
-      img_urls << img_url_pattern.match(link)[2]
+      link_match = img_url_pattern.match(link)
+      if link_match
+        img_urls << link_match[2]
+      end
     end
     img_urls
   end
+
+  def reformat_urls(img_urls)
+    img_urls.each do |url|
+      url.gsub!(/(%2F)/) { '/' }
+    end
+  end
+
 
   def select_image(img_urls)
     img_urls.sample
@@ -41,7 +51,9 @@ class Imgin
 
   def imgin(search_phrase)
     # imgin method calls the other methods to return the end result.
-    select_image(get_search_results(search_phrase))
+    links_to_imgs = extract_links_to_imgs(get_search_results(search_phrase))
+    img_links = parse_image_links(links_to_imgs)
+    select_image(reformat_urls(img_links))
   end
 
 end
@@ -49,7 +61,7 @@ end
 
 #### This goes out
 test = Imgin.new
-page = test.get_search_results('Paulyshore')
-# require 'debugger'; debugger
-links = test.extract_links_to_imgs(page)
-p test.parse_image_links(links)
+p test.imgin('paulyshore')
+# page = test.get_search_results('Paulyshore')
+# links = test.extract_links_to_imgs(page)
+# p test.parse_image_links(links)
