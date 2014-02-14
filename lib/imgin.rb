@@ -1,7 +1,8 @@
 # ImagIn program takes a word (or string) as an argument and
 # returns a URL or an image based on an image search of that word or string
-module Imgin
+require 'bundler/setup'
 
+module Imgin
   require 'open-uri' 
   require 'nokogiri'
 
@@ -51,9 +52,4 @@ module Imgin
   end
 
 end
-#### This goes out
-test = Imgin::Image.get('paulyshore')
-p test
-# page = test.get_search_results('Paulyshore')
-# links = test.extract_links_to_imgs(page)
-# p test.parse_image_links(links)
+
