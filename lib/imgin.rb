@@ -3,7 +3,7 @@
 require 'bundler/setup'
 
 module Imgin
-  require 'open-uri' 
+  require 'open-uri'
   require 'nokogiri'
 
   class Image
@@ -34,7 +34,7 @@ module Imgin
 
       def reformat_urls(img_urls)
         img_urls.each do |url|
-          url.gsub!(/(%2F)/) { '/' }
+          url.gsub!(/(%2F)/) { '/' }.gsub!(/(%2520)/) { '%20' }
         end
       end
 
