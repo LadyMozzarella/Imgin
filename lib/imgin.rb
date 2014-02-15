@@ -7,11 +7,13 @@ module Imgin
   require 'nokogiri'
 
   class Image
-
     class << self
-      def get_search_results(search_phrase)
+      def get_search_results(search_phrase, size)
+        size_hash = { :small => "&imgsz=icon", :medium => "&imgsz=medium",
+                    :large => "&imgsz=large", :huge => "&imgsz=wallpaper"}
+
         search_phrase.gsub!(/\s/) { '+' }
-        page = Nokogiri::HTML(open("https://images.search.yahoo.com/search/images?p=#{search_phrase}"))
+        page = Nokogiri::HTML(open("https://images.search.yahoo.com/search/images?p=#{search_phrase}#{size_hash[size.to_sym]}"))
       end
 
       def extract_links_to_imgs(page)
@@ -42,14 +44,12 @@ module Imgin
         img_urls.sample
       end
 
-      def get(search_phrase)
-        links_to_imgs = extract_links_to_imgs(get_search_results(search_phrase))
+      def get(search_phrase, size="")
+        links_to_imgs = extract_links_to_imgs(get_search_results(search_phrase, size))
         img_links = parse_image_links(links_to_imgs)
         select_image(reformat_urls(img_links))
       end
     end
-
   end
-
 end
 
