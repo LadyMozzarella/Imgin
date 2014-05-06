@@ -1,7 +1,6 @@
 #ImgIn
 
 ##What is ImgIn?
-
 ImgIn allows you to get a random image with your specified content search. It also has the capability to specify a size of image. 
 
 ===
@@ -9,7 +8,6 @@ ImgIn allows you to get a random image with your specified content search. It al
 ##Getting Started
 
 ###Installation
-
 Install gem. *once we're on rubygems.org.
 
 ```
@@ -60,7 +58,7 @@ Here's what the above URL goes to(if you're curious):
 ##Contributors
 - [Mason O'Neal](https://github.com/MasonONeal)
 - [Iván Sued](https://github.com/thefenry)
-- [José](https://github.com/menor)
-- [Brittany](https://github.com/LadyMozzarella)
+- [José Menor](https://github.com/menor)
+- [Brittany Mazza](https://github.com/LadyMozzarella)
 
 
