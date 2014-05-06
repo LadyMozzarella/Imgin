@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Imgin by LadyMozzarella</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/LadyMozzarella/Imgin">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/LadyMozzarella/Imgin/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/LadyMozzarella/Imgin/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Imgin</h1>
+          <p>Imigin is a ruby gem that is used to import an image url.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/LadyMozzarella">LadyMozzarella</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="imgin" class="anchor" href="#imgin"><span class="octicon octicon-link"></span></a>ImgIn</h1>
+
+<h2>
+<a name="what-is-imgin" class="anchor" href="#what-is-imgin"><span class="octicon octicon-link"></span></a>What is ImgIn?</h2>
+
+<p>ImgIn allows you to get a random image with your specified content search. It also has the capability to specify a size of image. </p>
+
+<h1></h1>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>Install gem. *once we're on rubygems.org.</p>
+
+<pre><code>$ gem install 'imgin'
+</code></pre>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>Require ImgIn at the top of your file.</p>
+
+<pre><code>require 'imgin'
+</code></pre>
+
+<p>Fetch one image URL.</p>
+
+<pre><code>Imgin::Image.get( **insert your string** )
+</code></pre>
+
+<p>Place the Imgin get command anywhere in your ruby code that you need an image url. Here's an example: </p>
+
+<div class="highlight highlight-ruby"><pre><span class="no">Imgin</span><span class="o">::</span><span class="no">Image</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"banana slug"</span><span class="p">)</span> <span class="c1"># =&gt; "fc06.deviantart.net/fs71/i/2013/022/3/7/banana_slugs_by_hanakoheals-d5scksb.jpg"</span>
+</pre></div>
+
+<p>An extra parameter can be added in order to obtain a specific size of image. Here's an example of that:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="no">Imgin</span><span class="o">::</span><span class="no">Image</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"banana slug"</span><span class="p">,</span> <span class="s2">"medium"</span><span class="p">)</span> <span class="c1"># =&gt; "fc06.deviantart.net/fs71/i/2013/022/3/7/banana_slugs_by_hanakoheals-d5scksb.jpg"</span>
+</pre></div>
+
+<p>There size options are icon, medium, large, and wallpaper.</p>
+
+<p>The URL can be used for whatever case you might need it. It picks an image at random out of about 50 images that meet the search parameters you entered. So, you won't recieve the same image too many times if you would like to repeat the population of images. Also, the image generally will not be the same if the command is run again. </p>
+
+<p>Here's what the above URL goes to(if you're curious):
+<img src="http://fc06.deviantart.net/fs71/i/2013/022/3/7/banana_slugs_by_hanakoheals-d5scksb.jpg" alt="http://fc06.deviantart.net/fs71/i/2013/022/3/7/banana_slugs_by_hanakoheals-d5scksb.jpg"></p>
+
+<h2>
+<a name="major-features" class="anchor" href="#major-features"><span class="octicon octicon-link"></span></a>Major Features</h2>
+
+<ul>
+<li>Enter your own search parameters</li>
+<li>Specify the general image size</li>
+</ul><h2>
+<a name="technology-stack" class="anchor" href="#technology-stack"><span class="octicon octicon-link"></span></a>Technology Stack</h2>
+
+<ul>
+<li>Ruby</li>
+<li>(Nokogiri gem used for scraping yahoo images)</li>
+</ul><h2>
+<a name="contributors" class="anchor" href="#contributors"><span class="octicon octicon-link"></span></a>Contributors</h2>
+
+<ul>
+<li><a href="https://github.com/MasonONeal">Mason O'Neal</a></li>
+<li><a href="https://github.com/thefenry">Iván Sued</a></li>
+<li><a href="https://github.com/menor">José Menor</a></li>
+<li><a href="https://github.com/LadyMozzarella">Brittany Mazza</a></li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-50709595-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
