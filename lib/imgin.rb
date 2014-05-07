@@ -1,6 +1,5 @@
 # ImagIn program takes a word (or string) as an argument and
 # returns a URL or an image based on an image search of that word or string
-require_relative 'Imgin/version.rb'
 
 module Imgin
   require 'open-uri'
