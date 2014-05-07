@@ -11,3 +11,4 @@ Gem::Specification.new do |s|
     ["= 1.6.1"]
   s.add_runtime_dependency "rspec",
     ["= 2.14.1"]
+end
