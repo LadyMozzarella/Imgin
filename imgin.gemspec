@@ -1,7 +1,10 @@
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
+require "Imgin/version"
 
 Gem::Specification.new do |s|
   s.name          = 'imgin'
-  s.version       = '0.0.1.pre'
+  s.version       = Imgin::VERSION
   s.date          = '2014-02-14'
   s.summary       = "Imgin"
   s.description   = "returns a URL for a sample image based on a given search word or phrase"
