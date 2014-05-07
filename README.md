@@ -8,10 +8,10 @@ ImgIn allows you to get a random image with your specified content search. It al
 ##Getting Started
 
 ###Installation
-Install gem. *once we're on rubygems.org.
+Install [ImgIn](https://rubygems.org/gems/imgin) gem.
 
 ```
-$ gem install 'imgin'
+$ gem install imgin --pre
 ```
 
 ###Usage
