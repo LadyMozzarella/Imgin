@@ -11,7 +11,7 @@ ImgIn allows you to get a random image with your specified content search. It al
 Install [ImgIn](https://rubygems.org/gems/imgin) gem.
 
 ```
-$ gem install imgin --pre
+$ gem install imgin
 ```
 
 ###Usage
