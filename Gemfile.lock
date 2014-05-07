@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    certified (0.1.1)
     diff-lcs (1.2.5)
     mini_portile (0.5.2)
     nokogiri (1.6.1)
@@ -18,5 +19,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  certified
   nokogiri
   rspec
