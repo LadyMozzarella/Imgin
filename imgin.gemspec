@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_runtime_dependency "nokogiri",
-    ["= 1.6.1"]
+    ["~> 1.8"]
   s.add_runtime_dependency "rspec",
     ["= 2.14.1"]
 end
